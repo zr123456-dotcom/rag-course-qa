@@ -1,0 +1,208 @@
+[
+  {
+    "id": "q01",
+    "category": "single_hop",
+    "question": "期末考几种题型？每种多少分？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 3}],
+    "expect_keywords": ["单选题", "判断题", "简答题", "程序分析题", "编程题"],
+    "min_coverage": 0.8,
+    "reference_answer": "单选题 20 题 20 分；判断题 10 题 10 分；简答题 4 题 20 分；程序分析题 2 题 20 分；编程题 3 题 30 分"
+  },
+  {
+    "id": "q02",
+    "category": "single_hop",
+    "question": "我直接调用run()能启动线程吗？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 6}],
+    "expect_keywords": ["start", "run"],
+    "reference_answer": "启动线程用 start()；run() 只是封装了被线程执行的代码，直接调用仅是普通方法调用；start() 启动线程并由 JVM 自动调用 run()"
+  },
+  {
+    "id": "q03",
+    "category": "single_hop",
+    "question": "Hashtable 和 HashMap 有什么区别？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 4}],
+    "expect_keywords": ["线程安全", "null"],
+    "reference_answer": "Hashtable：线程安全，效率低，不允许 null 键和 null 值；HashMap：线程不安全，效率高，允许 null 键和 null 值"
+  },
+  {
+    "id": "q04",
+    "category": "enumeration",
+    "question": "JDBC 有哪几个编程步骤？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 5}],
+    "expect_keywords": ["驱动", "连接", "Statement", "结果", "关闭"],
+    "min_coverage": 0.8,
+    "reference_answer": "①加载数据库驱动 ②通过 DriverManager 获取数据库连接 ③通过 Connection 获取 Statement 对象 ④使用 Statement 执行 SQL 语句 ⑤对执行结果进行处理 ⑥关闭连接，释放资源"
+  },
+  {
+    "id": "q05",
+    "category": "enumeration",
+    "question": "列表、集合、映射这三个概念有什么不同？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 4}],
+    "expect_keywords": ["有序", "无序", "映射"],
+    "reference_answer": "List 元素有序、不唯一（ArrayList、LinkedList）；Set 元素无序、唯一（HashSet、TreeSet）；Map 存储键值对，键唯一、值可重复（HashMap、TreeMap）"
+  },
+  {
+    "id": "q06",
+    "category": "enumeration",
+    "question": "多线程有哪几种实现方案？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 5}],
+    "expect_keywords": ["Thread", "Runnable", "Callable"],
+    "min_coverage": 1.0,
+    "reference_answer": "3 种：①继承 Thread 类，重写 run() 方法；②实现 Runnable 接口，重写 run() 方法；③实现 Callable 接口，重写 call() 方法"
+  },
+  {
+    "id": "q07",
+    "category": "enumeration",
+    "question": "TreeSet 靠什么保证元素唯一？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 3}],
+    "expect_keywords": ["自然排序", "比较器"],
+    "min_coverage": 1.0,
+    "reference_answer": "①自然排序：元素所在类实现 Comparable 接口并重写 compareTo() 方法；②比较器排序：创建 TreeSet 时传入 Comparator 接口对象，比较器类实现 compare() 方法"
+  },
+  {
+    "id": "q08",
+    "category": "confusable",
+    "question": "Map 和 Collection 有什么区别？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 4}],
+    "expect_keywords": ["键值", "单独"],
+    "reference_answer": "Map 存储键值对形式的元素，键唯一、值可重复；Collection 存储单独出现的元素，子接口 Set 元素唯一，子接口 List 元素可重复"
+  },
+  {
+    "id": "q09",
+    "category": "confusable",
+    "question": "Collection 和 Collections 有什么区别？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 4}],
+    "expect_keywords": ["顶层接口", "工具类"],
+    "reference_answer": "Collection 是单列集合的顶层接口，有 List 和 Set 两个子接口；Collections 是针对 Collection 集合进行操作的工具类，可对其进行排序、查找等操作"
+  },
+  {
+    "id": "q10",
+    "category": "confusable",
+    "question": "sleep() 和 wait() 有什么区别？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 6}],
+    "expect_keywords": ["必须指定时间", "可以不指定"],
+    "reference_answer": "sleep()：必须指定时间，不释放锁；wait()：可以不指定时间也可以指定时间，会释放锁"
+  },
+  {
+    "id": "q11",
+    "category": "hard_negative",
+    "question": "Map 和 Collections 有什么区别？",
+    "answerable": false,
+    "expect_sources": [],
+    "expect_keywords": [],
+    "reference_answer": null
+  },
+  {
+    "id": "q12",
+    "category": "hard_negative",
+    "question": "Java 的 record 关键字怎么用？",
+    "answerable": false,
+    "expect_sources": [],
+    "expect_keywords": [],
+    "reference_answer": null
+  },
+  {
+    "id": "q13",
+    "category": "unanswerable",
+    "question": "Java SE 和 Java EE 分别是什么意思？",
+    "answerable": false,
+    "expect_sources": [],
+    "expect_keywords": [],
+    "reference_answer": null
+  },
+  {
+    "id": "q14",
+    "category": "unanswerable",
+    "question": "本次考试的时间和地点是什么？",
+    "answerable": false,
+    "expect_sources": [],
+    "expect_keywords": [],
+    "reference_answer": null
+  },
+  {
+    "id": "q15",
+    "category": "cross_sentence",
+    "question": "TCP 建立连接时三次握手的过程是什么？",
+    "answerable": true,
+    "expect_sources": [{"file": "Java高级编程", "page": 6}],
+    "expect_keywords": ["连接请求", "确认", "三次握手"],
+    "reference_answer": "第一次握手：客户端向服务器端发出连接请求，等待服务器确认；第二次握手：服务器端向客户端返回响应，通知客户端收到连接请求；第三次握手：客户端再次向服务端发送确认信息，确认连接"
+  },
+    {
+    "id": "q16",
+    "category": "enumeration",
+    "question": "实时主动数据仓库有哪几种数据集成方式？",
+    "answerable": true,
+    "expect_sources": [{"file": "数据采集", "page": 1}],
+    "expect_keywords": ["数据整合", "数据联邦", "数据传播", "混合"],
+    "min_coverage": 0.7,
+    "reference_answer": "4 种：①数据整合（用 ETL 把多数据源物理归集到数据仓库，批量加载式物理集中）②数据联邦（建统一逻辑视图，物理数据仍分散，按需实时取数）③数据传播（数据在多应用间传递，如企业应用集成的消息交互）④混合方式（通用数据用整合，特定数据用联邦）"
+  },
+  {
+    "id": "q17",
+    "category": "enumeration",
+    "question": "数据脱敏的核心原则有哪些？",
+    "answerable": true,
+    "expect_sources": [{"file": "数据采集", "page": 2}],
+    "expect_keywords": ["保数据特征", "保数据一致性", "保业务规则", "保多次脱敏一致"],
+    "min_coverage": 0.7,
+    "reference_answer": "核心原则是「去敏感 + 保可用」：①保数据特征（脱敏后仍保留原格式，如身份证的区域、日期结构）②保数据一致性（字段间逻辑关系不变，如年龄与身份证生日匹配）③保业务规则关联（主外键、业务语义等关联不被破坏）④保多次脱敏一致（同一数据多次/多系统脱敏结果相同）"
+  },
+  {
+    "id": "q18",
+    "category": "enumeration",
+    "question": "Flume 有哪三个核心组件？",
+    "answerable": true,
+    "expect_sources": [{"file": "数据采集", "page": 3}],
+    "expect_keywords": ["数据源", "数据通道", "数据槽"],
+    "min_coverage": 1.0,
+    "reference_answer": "3 个：①数据源 Source（采集端，捕获数据并格式化为 Event 推送到通道）②数据通道 Channel（连接 Source 与 Sink 的缓冲区队列，暂存 Event）③数据槽 Sink（从 Channel 取出数据，写入 HDFS/HBase 等目标或提交到远程服务）"
+  },
+  {
+    "id": "q19",
+    "category": "question_only",
+    "question": "冯诺依曼计算机体系结构都包括哪些部分？",
+    "answerable": false,
+    "expect_sources": [],
+    "expect_keywords": [],
+    "reference_answer": null
+  },
+  {
+    "id": "q20",
+    "category": "question_only",
+    "question": "SRAM 和 DRAM 存储器各自的特点是什么？",
+    "answerable": false,
+    "expect_sources": [],
+    "expect_keywords": [],
+    "reference_answer": null
+  },
+  {
+    "id": "q21",
+    "category": "unanswerable",
+    "question": "操作系统里进程调度有哪些算法？",
+    "answerable": false,
+    "expect_sources": [],
+    "expect_keywords": [],
+    "reference_answer": null
+  },
+  {
+    "id": "q22",
+    "category": "single_hop",
+    "question": "计组的必考计算题有哪几类？",
+    "answerable": true,
+    "expect_sources": [{"file": "计组", "page": 2}],
+    "expect_keywords": ["补码", "IEEE754", "机器数"],
+    "max_chars": 350,
+    "reference_answer": "三类（均标注必考）：①十进制数与机器数（原码/反码/补码）互换、两个数的补码加减运算并判断溢出 ②用变形补码（双符号位）做加减运算并判断溢出 ③十进制浮点数与 IEEE754 格式 32 位浮点数编码的相互转换"
+  }
+]

@@ -1,0 +1,28 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# ---------- 向量库（可重建，勿提交）----------
+chroma_db/
+
+# ---------- IDE ----------
+.idea/
+.vscode/
+
+# ---------- 评估报告 ----------
+# latest.json 每次运行都会覆盖，产生无意义 diff
+eval/reports/latest.json
+# runs.jsonl 保留：它是运行历史，是评估有效性的证据
+
+# ---------- 系统文件 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 日志与临时文件 ----------
+*.log
+*.tmp

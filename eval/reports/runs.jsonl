@@ -1,0 +1,5 @@
+{"time": "2026-11-09T16:06:38", "total": 15, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6385, "refusal_acc": 1.0, "passed": 15, "note": "15题全绿基线"}
+{"time": "2026-11-09T16:11:41", "total": 15, "hit_rate": 1.0, "avg_cov": 0.9545, "avg_top1": 0.6385, "refusal_acc": 1.0, "passed": 14, "note": "top_k=2反向验证"}
+{"time": "2026-11-09T16:25:38", "total": 15, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6386, "refusal_acc": 1.0, "passed": 15, "note": "15题全绿基线"}
+{"time": "2026-11-09T17:15:41", "total": 15, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6385, "refusal_acc": 1.0, "passed": 15, "note": "15题全绿基线"}
+{"time": "2026-11-09T17:28:53", "total": 22, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6525, "refusal_acc": 1.0, "passed": 22, "note": "15题全绿基线"}
