@@ -5,3 +5,6 @@
 {"time": "2026-11-09T17:28:53", "total": 22, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6525, "refusal_acc": 1.0, "passed": 22, "note": "15题全绿基线"}
 {"time": "2026-11-11T16:09:23", "total": 22, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6529, "refusal_acc": 1.0, "passed": 22, "note": "15题全绿基线"}
 {"time": "2026-11-11T16:10:22", "total": 22, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6528, "refusal_acc": 1.0, "passed": 22, "note": "15题全绿基线"}
+{"time": "2026-11-11T16:35:26", "total": 22, "errors": 0, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6527, "refusal_acc": 1.0, "passed": 22, "note": "22题基线"}
+{"time": "2026-11-11T16:38:00", "total": 22, "errors": 22, "hit_rate": 0, "avg_cov": 0, "avg_top1": 0, "refusal_acc": 0, "passed": 0, "note": "故障注入测试"}
+{"time": "2026-11-11T16:40:54", "total": 22, "errors": 0, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6527, "refusal_acc": 1.0, "passed": 22, "note": "容错补丁后基线"}
