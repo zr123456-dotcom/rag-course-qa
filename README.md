@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ### 4. 运行
 
 ```powershell
-python t8_测试RAG系统.py      # 单次问答
+python main.py                # 单次问答
 python eval/run_eval.py       # 跑评估集
 ```
 
@@ -84,7 +84,7 @@ python eval/run_eval.py       # 跑评估集
 | **内容指纹自动重建索引** | 早期靠手工 `reset=True`，多次因忘记重置而用旧向量调试；改为对"模型名+每块内容+元数据"做 SHA256，不一致自动重建 |
 | **提示词强调"禁止拼接"** | 曾出现真实幻觉：问"Map 和 Collections 的区别"，库里分别有两者的描述但**没有对比**，模型把两段拼起来还标注了来源 |
 | **逐文件容错** | 真实资料里有加密 PDF、扫描件、损坏文件；单个失败不能让整个知识库建不起来 |
-
+| **语料路径基于 `__file__` 解析** | 不依赖当前工作目录；从 Terminal 和 PyCharm Run 运行行为一致（曾因 `./data/...` 相对 CWD 解析，在 PyCharm 里加载到 0 篇文档） |
 ## 评估
 
 位置：`eval/`（`questions.json` 22 题、`run_eval.py` 评测脚本、`场景说明.md` 需求与判定规则）
@@ -147,11 +147,12 @@ top_k=2 反向验证      14/15   ← 预期内的退化
 
 ```
 .
-├── t3_文档加载器.py        多格式加载（PDF/Word/PPT/文本）
-├── t4_文本分块器.py        按句子边界分块
-├── t5_模拟嵌入和检索.py    嵌入 + Chroma 存储与检索
-├── t7_完整的RAG查询系统.py  检索 → 上下文 → 生成
-├── t8_测试RAG系统.py       手动测试入口
+├── doc_loader.py           多格式加载（PDF/Word/PPT/文本）
+├── text_splitter.py        按句子边界分块
+├── vector_store.py         嵌入（bge-m3）+ Chroma 存储与检索
+├── rag_pipeline.py         检索 → 上下文 → 生成
+├── main.py                 手动测试入口
+├── legacy/                 早期探索脚本（归档，不参与流程）
 ├── data/sample_documents/  语料
 └── eval/
     ├── 场景说明.md          用户/范围/红线/判定规则

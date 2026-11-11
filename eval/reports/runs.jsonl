@@ -3,3 +3,5 @@
 {"time": "2026-11-09T16:25:38", "total": 15, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6386, "refusal_acc": 1.0, "passed": 15, "note": "15题全绿基线"}
 {"time": "2026-11-09T17:15:41", "total": 15, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6385, "refusal_acc": 1.0, "passed": 15, "note": "15题全绿基线"}
 {"time": "2026-11-09T17:28:53", "total": 22, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6525, "refusal_acc": 1.0, "passed": 22, "note": "15题全绿基线"}
+{"time": "2026-11-11T16:09:23", "total": 22, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6529, "refusal_acc": 1.0, "passed": 22, "note": "15题全绿基线"}
+{"time": "2026-11-11T16:10:22", "total": 22, "hit_rate": 1.0, "avg_cov": 1.0, "avg_top1": 0.6528, "refusal_acc": 1.0, "passed": 22, "note": "15题全绿基线"}

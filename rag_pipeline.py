@@ -10,9 +10,9 @@ client = OpenAI(
     base_url="https://api.deepseek.com",
 )
 from typing import Dict, List, Any
-from t5_模拟嵌入和检索 import SimpleVectorStore
-from t3_文档加载器 import get_documents
-from t4_文本分块器 import TextSplitter
+from vector_store import SimpleVectorStore
+from doc_loader import get_documents
+from text_splitter import TextSplitter
 
 def _fmt_source(meta: Dict[str, Any]) -> str:
     label = meta.get('filename', '?')

@@ -132,8 +132,8 @@ class SimpleVectorStore:
 
 
 if __name__ == '__main__':
-    from t3_文档加载器 import get_documents
-    from t4_文本分块器 import TextSplitter
+    from doc_loader import get_documents
+    from text_splitter import TextSplitter
 
     splitter = TextSplitter(chunk_size=350, chunk_overlap=50)
     documents = get_documents()

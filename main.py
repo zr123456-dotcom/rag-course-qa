@@ -1,8 +1,8 @@
 # 测试RAG系统
-from t7_完整的RAG查询系统 import rag_system
+from rag_pipeline import rag_system
 
 test_questions = [
-    "什么时候你真的需要RAG?"
+    "计算机组成原理都考什么呀?"
 ]
 
 for q in test_questions:

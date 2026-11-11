@@ -82,7 +82,7 @@ class TextSplitter:
         return chunks
 # 测试分块器
 if __name__ == '__main__':
-    from t3_文档加载器 import get_documents
+    from doc_loader import get_documents
     splitter = TextSplitter(chunk_size=150, chunk_overlap=20)
 
     print("测试文本分块:\n")

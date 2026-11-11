@@ -189,9 +189,14 @@ class SimpleDocumentLoader:
 
 
 # ---------- 保持原接口不变 ----------
-def get_documents(directory: str = "./data/sample_documents"):
-    DATA_DIR = Path(directory)
+def get_documents(directory: str = None):
+    # 默认语料目录基于本文件位置，不依赖当前工作目录
+    if directory is None:
+        DATA_DIR = Path(__file__).resolve().parent / "data" / "sample_documents"
+    else:
+        DATA_DIR = Path(directory)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    ...
     loader = SimpleDocumentLoader(DATA_DIR)
     documents = loader.load()
     if loader.errors:

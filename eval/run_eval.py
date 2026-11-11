@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from t7_完整的RAG查询系统 import rag_system      # noqa: E402
+from rag_pipeline import rag_system      # noqa: E402      # noqa: E402
 
 QUESTIONS = ROOT / "eval" / "questions.json"
 REPORT_DIR = ROOT / "eval" / "reports"
